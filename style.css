@@ -1,0 +1,17 @@
+body {
+    background-color: black;
+    color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#plane {
+    border: 2px solid #444;
+    border-radius: 10px;
+    border-width: 1px;
+    background-color: #111;
+}
