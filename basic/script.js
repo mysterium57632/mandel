@@ -88,7 +88,7 @@ function pixelToNumber(x, y) {
 function calcMandelbrot() {
     const image = ctx.getImageData(0, 0, canvas.width, canvas.height);
     const data = image.data;
-    const iterations = 500;
+    const iterations = 1000;
 
     for (i = 0; i < WIDTH; i++) {
         for (j = 0; j < HEIGHT; j++) {
@@ -137,18 +137,7 @@ function calcMandelbrot() {
     }
 }
 
-var a = 0;
-
-function animateMandelbrot() {
-    const angle = (a * Math.PI) / 180;
-    START_RE = Math.cos(angle);
-    START_IM = Math.sin(angle);
-    a = a + 1;
-    calcMandelbrot();
-    requestAnimationFrame(animateMandelbrot);
-}
 
 ini();
-while(true) {
-    requestAnimationFrame(animateMandelbrot);
-}
+calcMandelbrot();
+drawCord();
