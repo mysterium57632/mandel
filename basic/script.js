@@ -139,5 +139,7 @@ function calcMandelbrot() {
 
 
 ini();
+const startTime = Date.now();
 calcMandelbrot();
+console.log("compute-duration: " + (Date.now() - startTime) + "ms");
 drawCord();
